@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Intramurals Eligibility Checker</title>
+
+<!-- script -->
+<script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20240622/pngtree-running-track-sport-concept-image_15805813.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: white;
+    max-width: 500px;
+    margin: 60px auto;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+h1 {
+    color: #CF0F0F;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+select, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #1f4e79;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #163a5c;
+}
+
+.output {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h1>Intramurals Eligibility Checker</h1>
+
+<!-- Online Registration -->
+<label>Online Registration:</label>
+<select id="registration">
+    <option value="">Select</option>
+    <option value="yes">Yes</option>
+    <option value="no">No</option>
+</select>
+<br>
+<!-- Medical Clearance -->
+<label>Medical Clearance:</label>
+<select id="medical">
+    <option value="">Select</option>
+    <option value="yes">Yes</option>
+    <option value="no">No</option>
+</select>
+<br>
+<!-- Grade Level -->
+<label>Grade Level:</label>
+<select id="grade">
+    <option value="">Select</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="12">12</option>
+</select>
+
+<br><br>
+<button py-click="check_eligibility">Check Eligibility</button>
+
+<div class="output" id="result"></div>
+
+</div>
+
+<!-- Link to main.py -->
+<py-script src="main.py"></py-script>
+
+</body>
+</html>
